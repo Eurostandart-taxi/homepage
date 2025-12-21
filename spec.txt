@@ -209,11 +209,11 @@ Page is structured into the following main sections, each with an `id` for navba
 
 - Fixed at the top, collapsible on mobile using Bootstrap navbar.
 - Background: dark blue (`#01294F`), white text.
-- Left side: circular logo image only (no brand text), positioned absolutely so it overlaps the navbar slightly on desktop, but resized to fit neatly inside the navbar height on mobile.
+- Left side: logo image only (no brand text), styled to be clearly visible within the navbar on all devices.
   - Logo image: `https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/euro_standart_logo.jpg`
   - Alt text: `"Eurostandart taxi Logo"`
-  - Logo size and position on desktop: width 100px, height 100px, positioned with `top: -1rem` in the navbar brand area
-  - Logo size and position on small mobile screens: reduced to fit fully within the navbar height (around 48px x 48px), aligned within the navbar without overlapping outside its bounds
+  - Logo size on desktop: fixed width `170px`, height `40px`, with `border-radius: 2rem`.
+  - Logo size on small mobile screens: width approximately `120px`, height `32px`, with the same `border-radius: 2rem`, aligned within the navbar without overlapping its bounds.
 - Right side: navigation links (scroll to sections) and social icons.
 
 **Navigation links (in Georgian):**
@@ -291,6 +291,7 @@ Layout: Full-width section under navbar, with:
     - `tel:+995577406604` – displayed text: `577 406 604`
     - `tel:+995593123353` – displayed text: `593 12 33 53`
 - Optional small line under phones: `"თბილისი, შშელიძე N17"` (use exactly this street text from user: „შეშელიძის N17“).
+  - When this address line is displayed in the hero section, it must be rendered as a clickable link that opens the location in Google Maps in a new tab using the following URL: `https://www.google.com/maps/search/?api=1&query=თბილისი,+შეშელიძის+17` with `target="_blank"` and `rel="noopener"`.
 
 **Hero image:**
 - Use: `https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/eurostandart_hero.jpeg`
@@ -431,6 +432,8 @@ Use an accordion layout (collapsible Q&A). Provide exactly **5 questions and ans
 
 **FAQ items (all in Georgian):**
 
+All FAQ answers must be visually distinguished from regular body text by using the secondary color token from the design system (e.g., via a dedicated `.faq-answer` class or Bootstrap’s `text-secondary` utility that applies the secondary text color). Apply this styling consistently to every FAQ answer body.
+
 1. **Question 1:**
    - `"რა საკომისიო აქვს კომპანიას?"`
    - **Answer:**
@@ -469,7 +472,7 @@ Content layout:
 - Section title (h2): `"კონტაქტი"`
 - Short intro text (paragraph): `"დაგვიკავშირდით დამატებითი ინფორმაციისთვის ან რეგისტრაციისთვის."`
 
-Two-column layout on desktop (stacked on mobile):
+Two-column layout on desktop (stacked on mobile), with the embedded map stretching across the full row:
 
 - Left column:
   - Phone block:
@@ -487,6 +490,21 @@ Two-column layout on desktop (stacked on mobile):
     - Text inline with a location icon:
       - Icon: location pin from the chosen icon set.
       - Text: `"თბილისი, შეშელიძის N17"` (exactly this spelling).
+      - The full address text must be a clickable link that opens the location in Google Maps in a new tab using the following URL: `https://www.google.com/maps/search/?api=1&query=თბილისი,+შეშელიძის+17` with `target="_blank"` and `rel="noopener"`. This behavior applies everywhere the address appears on the page.
+  - Embedded map:
+    - Below the address block, display an embedded responsive Google Map iframe showing the same location.
+    - On mobile and tablet widths, the map may appear directly under the address within the left column.
+    - Use the following iframe `src` URL exactly as provided:
+      - `src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.243933058308!2d44.801168776004!3d41.787034771245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40446db5ca29530f%3A0xadfde8bd2ca38271!2s17%20Tengiz%20Sheshelidze%20St%2C%20T%27bilisi!5e0!3m2!1sen!2sge!4v1734650000000!5m2!1sen!2sge"`
+    - Implementation details:
+      - On large screens (desktop and above), the map must stretch across the full width of the contact section in its own row (e.g., a `col-12` grid item placed under both contact columns).
+      - On smaller screens, it can sit within the left column but should still use full available width.
+      - Wrap the iframe in a Bootstrap `ratio ratio-16x9` container to keep it responsive.
+      - Apply appropriate top/bottom margins to separate it from surrounding content.
+      - Give the map rounded corners and hide any overflow from the container.
+      - Constrain the visible map container with a max-height of `400px` (e.g., via a dedicated `.contact-map-embed` class) while keeping `width="100%"`.
+      - Set iframe attributes including a height around `260–360` pixels depending on viewport, `style="border:0;"`, `allowfullscreen`, `loading="lazy"`, and `referrerpolicy="no-referrer-when-downgrade"`.
+      - Provide a descriptive `title` attribute such as `"Eurostandart taxi Location Map"` for accessibility.
 
 - Right column:
   - Email block:
@@ -540,7 +558,7 @@ Footer appears at the bottom across full width.
 
 ## 7. Assets & External Resources
 
-- **Logo:** `https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/euro_standart_logo.jpg` (displayed as a 100px by 100px circular logo in the navbar, positioned absolutely with a slight top overlap)
+- **Logo:** `https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/logo-wide.jpeg` (displayed as a 100px high logo in the navbar, positioned absolutely with a slight top overlap and scaled proportionally based on its intrinsic aspect ratio)
 - **Hero image:** `https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/eurostandart_hero.jpeg`
 - **Icons:**
   - Facebook icon image: `https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/Facebook_Logo_Secondary.png` (use this for all Facebook links in navbar and footer)
