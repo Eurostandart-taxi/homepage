@@ -2,6 +2,10 @@
 <html lang="ka">
 <head>
     <meta charset="UTF-8">
+    <link rel="preload" href="https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/material-symbols-outlined.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>გახდი Yandex Go-ს მძღოლი — შემოუერთდი Eurostandart taxi</title>
     <meta name="description" content="მძღოლების რეგისტრაცია Yandex Go-ზე, პროფესიონალური მხარდაჭერა, გამჭვირვალე პირობები და BYD Qin L-ის ლიზინგი ტაქსისთვის თბილისში.">
@@ -53,7 +57,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: "Material Symbols Outlined";
+            font-style: normal;
+            font-weight: 300 500; /* match your usage range */
+            font-display: block; /* prevents showing ligature text like local_taxi */
+            src: url("https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/material-symbols-outlined.woff2") format("woff2");
+        }
+
+        .material-symbols-outlined {
+            font-family: "Material Symbols Outlined";
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px; /* default; you override in places */
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+
+            -webkit-font-feature-settings: "liga";
+            -webkit-font-smoothing: antialiased;
+
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PTKBJEPG6P"></script>
@@ -585,8 +617,7 @@
         .mb-4-5 {
             margin-bottom: 1.75rem;
         }
-    </style>
-    <style>
+
         .text-main {
             color: var(--color-text-main) !important;
         }
@@ -602,8 +633,7 @@
         .contact-map-embed {
             max-height: 400px;
         }
-    </style>
-    <style>
+
         .cta-card {
             border: 1px solid rgba(0, 0, 0, 0.05);
             background: var(--color-surface);
