@@ -1,4 +1,4 @@
-# Eurostandart Georgian Driver Recruitment Landing Page Specification
+# Eurostandart Georgian Driver Recruitment Landing Page Specification (SEO-Final)
 
 ## 1. Overview
 
@@ -6,7 +6,7 @@ Single-page, mobile-first landing site for **Eurostandart taxi / Eurostandartი
 - Drivers **with their own cars** for work via **Yandex Go** under Eurostandart (official partner)
 - Highly rated drivers **without cars** for **BYD Qin L** leasing
 
-Primary interaction is via **phone calls** (clickable phone number links). The page is entirely in **Georgian**, except for the business name and one main English headline.
+Primary interaction is via **phone calls** (clickable phone number links). The page is entirely in **Georgian**, except for the business name where required.
 
 The entire site is a single `index.html` file.
 
@@ -104,9 +104,15 @@ The entire site is a single `index.html` file.
   - No external user input forms (no user-submitted text fields required here).
   - All external scripts loaded via HTTPS.
 - **SEO**:
-  - All relevant `<meta>` tags in `<head>`.
-  - Appropriate use of headings and text content.
-  - Descriptive page title and description.
+  - Production-ready SEO tags in `<head>` including:
+    - `<title>`
+    - `meta description`
+    - canonical URL
+    - viewport for mobile-first indexing
+    - Open Graph
+    - Twitter Card
+    - robots index/follow
+    - Schema.org JSON-LD structured data
 - **Google Analytics**:
   - Include a placeholder GA script in `<head>` with a dummy measurement ID like `G-XXXXXXXXXX` and a clear comment to replace it.
 
@@ -114,80 +120,107 @@ The entire site is a single `index.html` file.
 
 ## 4. SEO & Head Section Content
 
-The `<head>` section must include at least the following:
+### 4.1 Document Language
+```html
+<html lang="ka">
+```
 
-- Document language:
-  ```html
-  <html lang="ka">
-  ```
+### 4.2 Required Meta Tags
+```html
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
 
-- Required meta tags:
-  ```html
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  ```
+### 4.3 Canonical URL
+Use the exact canonical homepage URL below everywhere canonical is required:
+```html
+<link rel="canonical" href="https://eurostandart.breba.site/">
+```
 
-- Page title (in Georgian with brand name):
-  ```html
-  <title>ევროსტანდარტ – მძღოლების რეკრუტინგი Yandex Go-სთვის და BYD QIN L ლიზინგი</title>
-  ```
+### 4.4 Page Title
+Value-first Georgian title, ending in the exact business name:
+```html
+<title>გახდი Yandex Go-ს მძღოლი — შემოუერთდი Eurostandart taxi</title>
+```
 
-- Meta description (Georgian, summarizing both directions):
-  ```html
-  <meta name="description" content="ევროსტანდარტ – ოფიციალური Yandex Go პარტნიორი თბილისში. დარეგისტრირდი მძღოლად საკუთარი ავტომობილით ან აიყვანე თანამედროვე BYD QIN L ტაქსისთვის ლიზინგით, მძღოლებისთვის სპეციალური პირობებით.">
-  ```
+### 4.5 Meta Description
+Georgian description focused on services; **no brand name** required:
+```html
+<meta name="description" content="მძღოლების რეგისტრაცია Yandex Go-ზე, პროფესიონალური მხარდაჭერა, გამჭვირვალე პირობები და BYD Qin L-ის ლიზინგი ტაქსისთვის თბილისში.">
+```
 
-- Meta keywords:
-  ```html
-  <meta name="keywords" content="ევროსტანდარტ, Yandex Go მძღოლი, ტაქსი თბილისი, BYD Qin L ლიზინგი, მძღოლების რეკრუტინგი, ტაქსის ლიზინგი, ოფიციალური Yandex პარტნიორი">
-  ```
+### 4.6 Meta Keywords
+```html
+<meta name="keywords" content="Yandex Go მძღოლი, ტაქსი თბილისი, მძღოლების რეგისტრაცია, BYD Qin L ლიზინგი, ტაქსის ლიზინგი, მძღოლების მხარდაჭერა">
+```
 
-- Meta robots:
-  ```html
-  <meta name="robots" content="index,follow">
-  ```
+### 4.7 Robots
+```html
+<meta name="robots" content="index,follow">
+```
 
-- Open Graph (OG) tags for social sharing:
-  ```html
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Eurostandart taxi – მძღოლების რეკრუტინგი და BYD Qin L ლიზინგი თბილისში">
-  <meta property="og:description" content="იმუშავე Yandex Go-ზე Eurostandart taxi-ის პარტნიორობით ან აიყვანე თანამედროვე BYD Qin L ტაქსისთვის ლიზინგით.">
-  <meta property="og:image" content="https://cdn.breba.app/templates/images/hero.jpg">
-  <meta property="og:url" content="https://example.com/">
-  <meta property="og:locale" content="ka_GE">
-  ```
+### 4.8 Open Graph (OG) Tags
+Georgian OG fields, canonical URL, Georgian locale, and the specified social image + dimensions:
+```html
+<meta property="og:type" content="website">
+<meta property="og:title" content="გახდი Yandex Go-ს მძღოლი — შემოუერთდი Eurostandart taxi">
+<meta property="og:description" content="მძღოლების რეგისტრაცია Yandex Go-ზე, პროფესიონალური მხარდაჭერა, გამჭვირვალე პირობები და BYD Qin L-ის ლიზინგი ტაქსისთვის თბილისში.">
+<meta property="og:image" content="https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/og-image.jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://eurostandart.breba.site/">
+<meta property="og:locale" content="ka_GE">
+```
 
-- Twitter Card tags (basic):
-  ```html
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Eurostandart taxi – მძღოლების რეკრუტინგი და BYD Qin L ლიზინგი">
-  <meta name="twitter:description" content="იმუშავე Yandex Go-ზე Eurostandart taxi-ის საშუალებით ან აიყვანე BYD Qin L ტაქსისთვის ლიზინგით თბილისში.">
-  <meta name="twitter:image" content="https://cdn.breba.app/templates/images/hero.jpg">
-  ```
+### 4.9 Twitter Card Tags
+```html
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="გახდი Yandex Go-ს მძღოლი — შემოუერთდი Eurostandart taxi">
+<meta name="twitter:description" content="მძღოლების რეგისტრაცია Yandex Go-ზე, პროფესიონალური მხარდაჭერა, გამჭვირვალე პირობები და BYD Qin L-ის ლიზინგი ტაქსისთვის თბილისში.">
+<meta name="twitter:image" content="https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/og-image.jpeg">
+```
 
-- Canonical link (placeholder URL):
-  ```html
-  <link rel="canonical" href="https://example.com/">
-  ```
+### 4.10 Favicon
+```html
+<link rel="icon" type="image/png" href="https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/euro_standart_logo.jpg">
+```
 
-- Favicon (can reuse logo as favicon, optional):
-  ```html
-  <link rel="icon" type="image/png" href="https://cdn.breba.app/templates/images/logo.png">
-  ```
+### 4.11 Schema.org Structured Data (JSON-LD) (LOCKED)
+Transportation service schema with verified business facts:
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TransportationService",
+  "@id": "https://eurostandart.breba.site/#transportationservice",
+  "name": "Eurostandart taxi",
+  "url": "https://eurostandart.breba.site/",
+  "logo": "https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/logo-wide.jpeg",
+  "telephone": [
+    "+995577406604",
+    "+995593123353"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "თბილისი",
+    "streetAddress": "შეშელიძის N17",
+    "addressCountry": "GE"
+  }
+}
+</script>
+```
 
-- Google Analytics placeholder (to be replaced with a real ID):
-  ```html
-  <!-- Google Analytics: replace G-XXXXXXXXXX with real Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} 
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-  ```
-
-- Custom `<style>` block for all non-Bootstrap styling.
+### 4.12 Google Analytics Placeholder
+```html
+<!-- Google Analytics: replace G-XXXXXXXXXX with real Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+```
 
 ---
 
@@ -206,11 +239,10 @@ Page is structured into the following main sections, each with an `id` for navba
 10. Footer
 
 ### 5.1 Navbar
-
 - Fixed at the top, collapsible on mobile using Bootstrap navbar.
 - Background: dark blue (`#01294F`), white text.
 - Left side: logo image only (no brand text), styled to be clearly visible within the navbar on all devices.
-  - Logo image: `https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/euro_standart_logo.jpg`
+  - Logo image: `https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/logo-wide.jpeg`
   - Alt text: `"Eurostandart taxi Logo"`
   - Logo size on desktop: fixed width `170px`, height `40px`, with `border-radius: 2rem`.
   - Logo size on small mobile screens: width approximately `120px`, height `32px`, with the same `border-radius: 2rem`, aligned within the navbar without overlapping its bounds.
@@ -230,7 +262,6 @@ Use the provided Facebook icon image asset for this link. Provide `aria-label` a
 On mobile, nav links and social icons collapse under a hamburger menu.
 
 ### 5.2 Hero Section (`#home`)
-
 Background:
 - Use a white background consistent with the main card/section surface color (e.g., explicit `#FFFFFF` or the equivalent surface token, not the global page background).
 
@@ -244,99 +275,64 @@ Layout: Full-width section under navbar, with:
 - Main headline (h1, in Georgian):
   - `"მძღოლების შესაძლებლობები Eurostandart taxi"`
 - Supporting subheading CTA cards (under the main headline):
-  - Replace the simple text subheading with two vertically stacked CTA cards (one on top of the other).
-  - Both cards must keep the exact existing Georgian sentences and "გაიგე მეტი" link texts as specified below (do not alter the copy).
-  - Layout:
-    - Stack the two cards in a single column on all screen sizes.
-    - Each card is a horizontal flex layout: an icon on the left and text plus link on the right.
+  - Two vertically stacked CTA cards (one on top of the other).
+  - Keep the existing Georgian sentences and "გაიგე მეტი" link texts as specified below (do not alter the copy).
   - Card 1 (Yandex Go CTA):
-    - Text within the card: `"მეტი შემოსავალი Yandex Go-ზე შენზე მორგებული პირობებით."`
-    - Card click behavior:
-      - The entire card is a single clickable element linking to `#yandex-go` (e.g., implemented as an `<a>` wrapper).
-      - Provide an accessible `aria-label` describing that this card leads to more information about working on Yandex Go.
-    - "Learn more" link styling:
-      - Text: `"გაიგე მეტი"`
-      - Visually placed on its own line under the main text inside the card.
-      - Styled as emphasized link text (e.g., primary link color, semi-bold) with a right-arrow icon immediately after the text (e.g., `arrow_forward`).
-      - The visual "გაიგე მეტი" row is part of the same clickable card (not a separate nested link).
-    - Icon:
-      - Shown to the left of the text.
-      - Use a taxi/ride icon from the chosen icon set (e.g., `local_taxi` from Material Symbols or equivalent).
+    - Text: `"მეტი შემოსავალი Yandex Go-ზე შენზე მორგებული პირობებით."`
+    - Entire card links to `#yandex-go` (single `<a>` wrapper).
+    - "გაიგე მეტი" row is visual-only and part of the same clickable card (no nested link).
+    - Icon: `local_taxi` (Material Symbols).
   - Card 2 (BYD Qin L CTA):
-    - Text within the card: `"BYD Qin L-ის სრულიად ახალი ავტომობილები ლიზინგით ტაქსისთვის სპეციალური პირობებით."`
-    - Card click behavior:
-      - The entire card is a single clickable element linking to `#leasing`.
-      - Provide an accessible `aria-label` describing that this card leads to more information about BYD Qin L leasing.
-    - "Learn more" link styling:
-      - Text: `"გაიგე მეტი"`
-      - Visually placed on its own line under the main text inside the card.
-      - Styled as emphasized link text with a right-arrow icon immediately after the text, as in Card 1.
-      - The visual "გაიგე მეტი" row is part of the same clickable card (not a separate nested link).
-    - Icon:
-      - Shown to the left of the text.
-      - Use a car/vehicle icon from the chosen icon set (e.g., `car_rental` from Material Symbols or equivalent).
-  - Visual style:
-    - Body text inside the cards uses the main text color token (text main) for consistency with the rest of the page.
-    - The "გაიგე მეტი" row keeps its current emphasized link styling (primary link color, semi-bold, arrow icon).
-    - Cards reuse the standard card styling from this spec (white surface, very subtle light border, no visible shadow, square corners, internal padding).
-    - Entire card is visually “pretty” and prominent in the hero.
-    - Hover/focus states:
-      - Pointer cursor on hover to indicate clickability.
-      - CTA cards "pop out" on hover/focus using:
-        - Slight upward translation and subtle scale-up (e.g., translateY(-0.25rem) and scale around 1.02–1.03).
-        - Slightly stronger visual emphasis via a soft shadow only; the border color remains the same light neutral color on all states.
-      - No colorful borders (primary or secondary) are used on CTA cards in any state (default, hover, or focus).
+    - Text: `"BYD Qin L-ის სრულიად ახალი ავტომობილები ლიზინგით ტაქსისთვის სპეციალური პირობებით."`
+    - Entire card links to `#leasing`.
+    - "გაიგე მეტი" row is visual-only and part of the same clickable card.
+    - Icon: `car_rental` (Material Symbols).
+  - Hover/focus states:
+    - Pointer cursor on hover.
+    - Slight upward translation and subtle scale-up, plus soft shadow.
+    - No colorful borders in any state.
 - Primary callout: phone numbers as buttons/links:
-  - Phone links (click-to-call):
-    - `tel:+995577406604` – displayed text: `577 406 604`
-    - `tel:+995593123353` – displayed text: `593 12 33 53`
-- Optional small line under phones: `"თბილისი, შშელიძე N17"` (use exactly this street text from user: „შეშელიძის N17“).
-  - When this address line is displayed in the hero section, it must be rendered as a clickable link that opens the location in Google Maps in a new tab using the following URL: `https://www.google.com/maps/search/?api=1&query=თბილისი,+შეშელიძის+17` with `target="_blank"` and `rel="noopener"`.
+  - `tel:+995577406604` – displayed text: `577 406 604`
+  - `tel:+995593123353` – displayed text: `593 12 33 53`
+- Address line:
+  - Text: `"თბილისი, შეშელიძის N17"`
+  - Must be clickable and open Google Maps in a new tab:
+    - `https://www.google.com/maps/search/?api=1&query=თბილისი,+შეშელიძის+17`
+    - `target="_blank"` and `rel="noopener"`
 
 **Hero image:**
 - Use: `https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/eurostandart_hero.jpeg`
-- Alt text: `"ძღოლი თანამედროვე ავტომობილში Yandex Go-სთვის"`
-- Visual treatment: hero image must not have any shadow effect applied (no box-shadow or similar shadow styling).
+- Alt text: `"მძღოლი თანამედროვე ავტომობილში Yandex Go-სთვის"`
+- No box-shadow applied.
 
 On mobile, image appears below the text. On desktop, side-by-side two columns.
 
 ### 5.3 About / Company Overview (`#about`)
-
 Background:
-- Use the light gray/off-white background color token to visually separate it from the white hero section.
-
-Purpose: Briefly introduce Eurostandart and clearly highlight the two business directions.
+- Use the light gray/off-white background color token.
 
 **Section title (h2):**
 - `"Eurostandart taxi – ვინ ვართ ჩვენ"`
 
-**Intro paragraph (Georgian/brand mix):**
-- Use the following multi-sentence description as the intro copy (can be rendered as one paragraph or as separate lines with `<br>` in HTML, but the text itself must remain unchanged):
-  - `"Eurostandart taxi  საქართველოს ბაზარზე 2019 წლიდან ფუნქციონირებს. კომპანიის ძირითადი საქმიანობა ტაქსის სფეროში მსუბუქი ავტომობილების ლიზინგია. 2020 წელს კომპანია Yandex Go-ს პარტნიორი გახდა. Eurostandart taxi განკარგავს ეფექტურ და დინამიურ პერსონალს, რომელიც მძღოლებს უზრუნველყოფს ოპერატიული, ტექნიკური და კონსულტაციური მხარდაჭერით. პროფესიონალური მიდგომის წყალობით ტაქსის სეგმენტის კლიენტებს შეუძლიათ სტაბილური შემოსავლის მიღება მაქსიმალურად კომფორტულ პირობებში Eurostandart taxi-სგან!"`
+**Intro paragraph (must remain unchanged):**
+- `"Eurostandart taxi  საქართველოს ბაზარზე 2019 წლიდან ფუნქციონირებს. კომპანიის ძირითადი საქმიანობა ტაქსის სფეროში მსუბუქი ავტომობილების ლიზინგია. 2020 წელს კომპანია Yandex Go-ს პარტნიორი გახდა. Eurostandart taxi განკარგავს ეფექტურ და დინამიურ პერსონალს, რომელიც მძღოლებს უზრუნველყოფს ოპერატიული, ტექნიკური და კონსულტაციური მხარდაჭერით. პროფესიონალური მიდგომის წყალობით ტაქსის სეგმენტის კლიენტებს შეუძლიათ სტაბილური შემოსავლის მიღება მაქსიმალურად კომფორტულ პირობებში Eurostandart taxi-სგან!"`
 
-**Two-column sub-content (or two cards):**
+**Two cards:**
 - Card 1: "Yandex Go მიმართულება"
-  - Short text explaining (Georgian only, no English text in these cards):
-    - `"Eurostandart taxi ბიზნეს კლასის ავტომობილია ოფიციალური ოპერატორი Yandex Go პლატფორმაზე. ვარეგისტრირებთ მძღოლებს საკუთარი ავტომობილებით, ვუწევთ მხარდაჭერასა და მომსახურებას."`
+  - `"Eurostandart taxi ბიზნეს კლასის ავტომობილია ოფიციალური ოპერატორი Yandex Go პლატფორმაზე. ვარეგისტრირებთ მძღოლებს საკუთარი ავტომობილებით, ვუწევთ მხარდაჭერასა და მომსახურებას."`
 - Card 2: "BYD Qin L ლიზინგი"
-  - Short text explaining (Georgian only, no English text in these cards):
-    - `"კომპანიის მეორე მიმართულება უკავშირდება სრულიად ახალი BYD Qin L მეხუთე თაობის დატენვადი ჰიბრიდული ავტომობილების ლიზინგს. მაღალი რეიტინგის მქონე მძღოლებს ვთავაზობთ ტაქსისთვის მზადყოფნაში მყოფ ბიზნეს, კომფორტ+, კომფორტი კლასის ავტომობილებს სპეციალური პირობებით Eurostandart taxi-სგან."`
+  - `"კომპანიის მეორე მიმართულება უკავშირდება სრულიად ახალი BYD Qin L მეხუთე თაობის დატენვადი ჰიბრიდული ავტომობილების ლიზინგს. მაღალი რეიტინგის მქონე მძღოლებს ვთავაზობთ ტაქსისთვის მზადყოფნაში მყოფ ბიზნეს, კომფორტ+, კომფორტი კლასის ავტომობილებს სპეციალური პირობებით Eurostandart taxi-სგან."`
 
 ### 5.4 Yandex Go – Drivers With Own Car Section (`#yandex-go`)
-
-Focus: Recruiting drivers who already have their own car to work via Yandex Go with Eurostandart.
-
 **Section title (h2):**
 - `"Yandex Go – იმუშავე საკუთარი ბიზნეს კლასის ავტომობილით"`
 
-**Short intro text:**
+**Intro:**
 - `"დარეგისტრირდი Yandex Go-ზე სამუშაოდ Eurostandart taxi-ის საშუალებით და მიიღე გამჭვირვალე პირობები და მუდმივი მხარდაჭერა."`
 
-**Key benefits list (use bullet list or icon cards):**
-Use and slightly structure the provided Georgian text. Visually center the subheading and the group of bullet points within the content column.
-
+**Key benefits:**
 - Subheading: `"რას გთავაზობთ Eurostandart taxi Yandex Go მძღოლებს"` (centered)
-- Bullet points (list visually centered as a block, with left-aligned text items):
+- Bullet points:
   - `"0%-იანი საკომისიო 5%-ის ნაცვლად პირველი ერთი თვის განმავლობაში"`
   - `"მთლიანად დატენე ავტომობილი ბუნებრივი აირით 12%-იანი ფასდაკლებით და გადაიხადე საღამოს"`
   - `"Yandex Go-ზე გამომუშავებული თანხის ჩარიცხვა დამოუკიდებლად, ნებისმიერ დროს"`
@@ -344,25 +340,21 @@ Use and slightly structure the provided Georgian text. Visually center the subhe
   - `"სწრაფი სესხი სამი თვის შემდეგ"`
   - `"მუდმივად განახლებული სასიამოვნო სიახლეები მძღოლებისთვის"`
 
-**Call-to-action area:**
+**CTA:**
 - Text: `"გაიგე მეტი და დარეგისტრირდი ტელეფონით"`
-- Display both phone numbers as prominent clickable links.
+- Both phone numbers shown as prominent clickable links.
 
 ### 5.5 BYD Qin L Leasing – Drivers Without Car Section (`#leasing`)
-
-Focus: Drivers without their own car, or wanting to upgrade to new BYD Qin L via leasing.
-
 **Section title (h2):**
 - `"BYD Qin L – ბიზნეს კლასის ავტომობილი ლიზინგით"`
 
-**Short intro text summarizing provided Georgian copy:**
-- Can reuse and structure text:
-  - `"მეტი შემოსავალი Eurostandart taxi-ის თანამედროვე ბიზნეს კლასის ავტომობილით. თუ არ გყავს საკუთარი ავტომობილი, თუ არ გინდა იჯარით გაყვანილი ავტომობილით მუშაობა, ან გინდა საკუთარი ავტომობილის ახლით ჩანაცვლება, Eurostandart taxi გთავაზობს სრულიად ახალ BYD QIN L დატენვად მეხუთე თაობის ჰიბრიდულ ავტომობილს ტაქსისთვის."`
+**Intro:**
+- `"მეტი შემოსავალი Eurostandart taxi-ის თანამედროვე ბიზნეს კლასის ავტომობილით. თუ არ გყავს საკუთარი ავტომობილი, თუ არ გინდა იჯარით გაყვანილი ავტომობილით მუშაობა, ან გინდა საკუთარი ავტომობილის ახლით ჩანაცვლება, Eurostandart taxi გთავაზობს სრულიად ახალ BYD QIN L დატენვად მეხუთე თაობის ჰიბრიდულ ავტომობილს ტაქსისთვის."`
 
 **Subheading:**
 - `"რატომ BYD Qin L Eurostandart taxi-დან"`
 
-**Key points (bullet list or icon cards):**
+**Key points:**
 - `"სრულად ახალი ბიზნეს კლასის BYD QIN L ავტომობილები ლიზინგით"`
 - `"ტაქსისთვის მზადყოფნაში მყოფი ბიზნეს, კომფორტ+ და კომფორტი კლასის ვერსიები"`
 - `"შენზე მორგებული ლიზინგის პირობები მაღალი რეიტინგის მქონე მძღოლებისთვის"`
@@ -370,206 +362,113 @@ Focus: Drivers without their own car, or wanting to upgrade to new BYD Qin L via
 - `"ინტეგრაცია Yandex Go პლატფორმასთან და სერვისით მხარდაჭერა"`
 
 **Highlight box:**
-- A short emphasized paragraph:
-  - `"აირჩიე ლიზინგის გეგმა, რომელიც შეესაბამება შენს გამოცდილებასა და გრაფიკს, იმუშავე Yandex Go-ზე და გაზარდე შემოსავალი თანამედროვე BYD Qin L ავტომობილით."`
+- `"აირჩიე ლიზინგის გეგმა, რომელიც შეესაბამება შენს გამოცდილებასა და გრაფიკს, იმუშავე Yandex Go-ზე და გაზარდე შემოსავალი თანამედროვე BYD Qin L ავტომობილით."`
 
-**Call-to-action:**
-- Text: `"გაინტერესებს პირობები? დაგვირეკე:"`
-- Show both phone numbers as buttons/links again.
+**CTA:**
+- `"გაინტერესებს პირობები? დაგვირეკე:"`
+- Both phone numbers shown again.
 
 ### 5.6 How It Works Section (`#how-it-works`)
-
-Explain simple steps common to both directions (with and without car).
-
 **Section title (h2):**
 - `"როგორ მუშაობს"`
 
-Use a three- or four-step horizontal layout on desktop and vertical on mobile.
-
-**Steps (in Georgian):**
-
+**Steps:**
 1. **"ნაბიჯი 1 – სატელეფონო კონსულტაცია"**
-   - Text: `"დაგვიკავშირდი მითითებულ ნომრებზე"`
-
+   - `"დაგვიკავშირდი მითითებულ ნომრებზე"`
 2. **"ნაბიჯი 2 – საჭირო დოკუმენტაცია"**
-   - Text: `"პირადობის მოწმობა, მართვის მოწმობა, ავტომობილის ტექ. პასპორტი"`
-
+   - `"პირადობის მოწმობა, მართვის მოწმობა, ავტომობილის ტექ. პასპორტი"`
 3. **"ნაბიჯი 3 – ავტომობილის შერჩევა ან რეგისტრაცია"**
-   - Text: `" თუ არ გყავს ავტომობილი – შეარჩიე BYD Qin L ლიზინგის პაკეტი."`
-
+   - `" თუ არ გყავს ავტომობილი – შეარჩიე BYD Qin L ლიზინგის პაკეტი."`
 4. **"ნაბიჯი 4 – მუშაობის დაწყება"**
-   - Text: `"მიიღე წვდომა Yandex Go პლატფორმაზე, ისარგებლე ჩვენი მომსახურებებით და დაიწყე თანხის გამომუშავება დღესვე."`
+   - `"მიიღე წვდომა Yandex Go პლატფორმაზე, ისარგებლე ჩვენი მომსახურებებით და დაიწყე თანხის გამომუშავება დღესვე."`
 
 ### 5.7 Benefits Summary Section (`#benefits`)
-
-Short section summarizing why to choose Eurostandart vs alternatives.
-
 **Section title (h2):**
 - `"რატომ Eurostandart taxi"`
 
-Use 3–4 benefit cards, each with an icon.
-
-Example benefit cards:
-
+**Benefit cards (with icons):**
 1. **"ოფიციალური Yandex პარტნიორი"**
-   - Text: `"სტაბილური პირობები, გამჭვირვალე და ოფიციალური მხარდაჭერა."`
-
+   - `"სტაბილური პირობები, გამჭვირვალე და ოფიციალური მხარდაჭერა."`
 2. **"ორი მიმართულება ერთი კომპანია"**
-   - Text: `"იმუშავე საკუთარი ავტომობილით და აიყვანე BYD Qin L ლიზინგით არჩევანი შენია."`
-
+   - `"იმუშავე საკუთარი ავტომობილით და აიყვანე BYD Qin L ლიზინგით არჩევანი შენია."`
 3. **"ფინანსური და ტექნიკური მხარდაჭერა"**
-   - Text: `"სწრაფი სესხები, ავტოსერვისი კონსიგნაციით და დამატებითი სერვისები მძღოლებისთვის."`
-
+   - `"სწრაფი სესხები, ავტოსერვისი კონსიგნაციით და დამატებითი სერვისები მძღოლებისთვის."`
 4. **"პროფესიონალური სერვისი"**
-   - Text: `"გამოცდილი გუნდი, კვალიფიციური მხარდაჭერა."`
+   - `"გამოცდილი გუნდი, კვალიფიციური მხარდაჭერა."`
 
 ### 5.8 FAQ Section (`#faq`)
-
-Use an accordion layout (collapsible Q&A). Provide exactly **5 questions and answers**, based on the business directions.
-
 **Section title (h2):**
 - `"კითხულობენ ხშირად"`
 
-**FAQ items (all in Georgian):**
+- Use accordion layout.
+- Exactly **5 Q&A items** as defined below.
+- All FAQ answer bodies must be styled with the secondary color token (for example via Bootstrap `text-secondary` or a dedicated `.faq-answer` class), consistently.
 
-All FAQ answers must be visually distinguished from regular body text by using the secondary color token from the design system (e.g., via a dedicated `.faq-answer` class or Bootstrap’s `text-secondary` utility that applies the secondary text color). Apply this styling consistently to every FAQ answer body.
-
-1. **Question 1:**
-   - `"რა საკომისიო აქვს კომპანიას?"`
-   - **Answer:**
-     - `"კომპანია იღებს 0%-ს ერთი თვის განმავლობაში, შემდეგ 5%-იან საკომისიოს"`
-
-2. **Question 2:**
-   - `"შემიძლია თუ არა ვიყო მძღოლი, თუ არ მაქვს საკუთარი ავტომობილი?"`
-   - **Answer:**
-     - `"დიახ. Eurostandart taxi გთავაზობს სრულიად ახალ BYD Qin L ავტომობილებს ლიზინგით. საჭირო არის მაღალი რეიტინგი და მინიმალური კრიტერიუმების დაკმაყოფილება, რის შემდეგაც ირჩევ ლიზინგის გეგმას და იწყებ მუშაობას."`
-
-3. **Question 3:**
-   - `"რა უპირატესობა აქვს BYD Qin L ავტომობილს ტაქსისთვის?""`
-   - **Answer:**
-     - `"BYD Qin L ბიზნეს კლასის ავტომობილია, მეხუთე თაობის დატენვადი ჰიბრიდი, რომელიც გამოირჩევა დაბალი საწვავის ხარჯით, თანამედროვე უსაფრთხოების სისტემებითა და მაღალი კომფორტით. Eurostandartი Taxi გთავაზობს ბიზნეს, კომფორტ+ და კომფორტი კლასის კონფიგურაციებს უკვე ტაქსისთვის მომზადებულ მდგომარეობაში."`
-
-4. **Question 4:**
-   - `"როგორ ხდება გამომუშავებული თანხის მიღება Yandex Go-ზე მუშაობისას?"`
-   - **Answer:**
-     - `"Eurostandart taxi-სთან თანამშრომლობისას შეგიძლია Yandex Go-ზე გამომუშავებული თანხის ჩარიცხვა დამოუკიდებლად, ნებისმიერ დროს. ეს გაძლევს მოქნილობას დაგეგმარებაში და ხარჯების მართვაში. ასევე, შეგიძლია თანხის გატანა კომპანიის ოფისში ვიზიტით."`
-
-5. **Question 5:**
-   - `"რა დონის მხარდაჭერას ვიღებ Eurostandart taxi-ისგან როგორც მძღოლი?"`
-   - **Answer:**
-     - `"Eurostandart taxi გთავაზობს სატელეფონო კონსულტაციას, რეგისტრაციაში დახმარებებს, ბუნებრივი გაზის განვადებით შეძენას – დილით დატენე ავტომობილი ბუნებრივი გაზით 12%-იანი ფასდაკლებით და გადაიხადე საღამოს​, ავტოსერვისის მომსახურებას კონსიგნაციით, სწრაფ სესხებს რეგისტრაციიდან სამი თვის შემდეგ და მუდმ طورად განახლებულ სპეციალურ შეთავაზებას."`
-
-Each FAQ item should be keyboard-accessible and identifiable for screen readers.
+1. **Q:** `"რა საკომისიო აქვს კომპანიას?"`  
+   **A:** `"კომპანია იღებს 0%-ს ერთი თვის განმავლობაში, შემდეგ 5%-იან საკომისიოს"`
+2. **Q:** `"შემიძლია თუ არა ვიყო მძღოლი, თუ არ მაქვს საკუთარი ავტომობილი?"`  
+   **A:** `"დიახ. Eurostandart taxi გთავაზობს სრულიად ახალ BYD Qin L ავტომობილებს ლიზინგით. საჭირო არის მაღალი რეიტინგი და მინიმალური კრიტერიუმების დაკმაყოფილება, რის შემდეგაც ირჩევ ლიზინგის გეგმას და იწყებ მუშაობას."`
+3. **Q:** `"რა უპირატესობა აქვს BYD Qin L ავტომობილს ტაქსისთვის?"`  
+   **A:** `"BYD Qin L ბიზნეს კლასის ავტომობილია, მეხუთე თაობის დატენვადი ჰიბრიდი, რომელიც გამოირჩევა დაბალი საწვავის ხარჯით, თანამედროვე უსაფრთხოების სისტემებითა და მაღალი კომფორტით. Eurostandartი Taxi გთავაზობს ბიზნეს, კომფორტ+ და კომფორტი კლასის კონფიგურაციებს უკვე ტაქსისთვის მომზადებულ მდგომარეობაში."`
+4. **Q:** `"როგორ ხდება გამომუშავებული თანხის მიღება Yandex Go-ზე მუშაობისას?"`  
+   **A:** `"Eurostandart taxi-სთან თანამშრომლობისას შეგიძლია Yandex Go-ზე გამომუშავებული თანხის ჩარიცხვა დამოუკიდებლად, ნებისმიერ დროს. ეს გაძლევს მოქნილობას დაგეგმარებაში და ხარჯების მართვაში. ასევე, შეგიძლია თანხის გატანა კომპანიის ოფისში ვიზიტით."`
+5. **Q:** `"რა დონის მხარდაჭერას ვიღებ Eurostandart taxi-ისგან როგორც მძღოლი?"`  
+   **A:** `"Eurostandart taxi გთავაზობს სატელეფონო კონსულტაციას, რეგისტრაციაში დახმარებას, ბუნებრივი გაზის განვადებით შეძენას – დილით დატენე ავტომობილი ბუნებრივი გაზით 12%-იანი ფასდაკლებით და გადაიხადე საღამოს​, ავტოსერვისის მომსახურებას კონსიგნაციით, სწრაფ სესხებს რეგისტრაციიდან სამი თვის შემდეგ და მუდმივად განახლებულ სპეციალურ შეთავაზებას."`
 
 ### 5.9 Contact Section (`#contact`)
-
-Purpose: Provide clear contact details and reinforce the primary call-to-action of calling Eurostandart taxi.
-
 Background:
-- Use the light gray/off-white background color token (same as other light sections, e.g., About).
+- Light gray/off-white background color token.
 
-Content layout:
-- Section title (h2): `"კონტაქტი"`
-- Short intro text (paragraph): `"დაგვიკავშირდით დამატებითი ინფორმაციისთვის ან რეგისტრაციისთვის."`
+**Section title (h2):**
+- `"კონტაქტი"`
 
-Two-column layout on desktop (stacked on mobile), with the embedded map stretching across the full row:
+**Intro:**
+- `"დაგვიკავშირდით დამატებითი ინფორმაციისთვის ან რეგისტრაციისთვის."`
 
-- Left column:
-  - Phone block:
-    - Label: `"ტელეფონი:"` (bold/small heading style)
-    - Primary phone button:
-      - Link: `tel:+995577406604`
-      - Visible text: `577 406 604`
-      - Styled as primary CTA button (uses the primary button style from the design system, can reuse same custom class as hero primary phone button).
-    - Secondary phone button:
-      - Link: `tel:+995593123353`
-      - Visible text: `593 12 33 53`
-      - Styled as outlined secondary button, consistent with existing phone CTAs.
-  - Address block:
-    - Label: `"მისამართი:"`
-    - Text inline with a location icon:
-      - Icon: location pin from the chosen icon set.
-      - Text: `"თბილისი, შეშელიძის N17"` (exactly this spelling).
-      - The full address text must be a clickable link that opens the location in Google Maps in a new tab using the following URL: `https://www.google.com/maps/search/?api=1&query=თბილისი,+შეშელიძის+17` with `target="_blank"` and `rel="noopener"`. This behavior applies everywhere the address appears on the page.
-  - Embedded map:
-    - Below the address block, display an embedded responsive Google Map iframe showing the same location.
-    - On mobile and tablet widths, the map may appear directly under the address within the left column.
-    - Use the following iframe `src` URL exactly as provided:
-      - `src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.243933058308!2d44.801168776004!3d41.787034771245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40446db5ca29530f%3A0xadfde8bd2ca38271!2s17%20Tengiz%20Sheshelidze%20St%2C%20T%27bilisi!5e0!3m2!1sen!2sge!4v1734650000000!5m2!1sen!2sge"`
-    - Implementation details:
-      - On large screens (desktop and above), the map must stretch across the full width of the contact section in its own row (e.g., a `col-12` grid item placed under both contact columns).
-      - On smaller screens, it can sit within the left column but should still use full available width.
-      - Wrap the iframe in a Bootstrap `ratio ratio-16x9` container to keep it responsive.
-      - Apply appropriate top/bottom margins to separate it from surrounding content.
-      - Give the map rounded corners and hide any overflow from the container.
-      - Constrain the visible map container with a max-height of `400px` (e.g., via a dedicated `.contact-map-embed` class) while keeping `width="100%"`.
-      - Set iframe attributes including a height around `260–360` pixels depending on viewport, `style="border:0;"`, `allowfullscreen`, `loading="lazy"`, and `referrerpolicy="no-referrer-when-downgrade"`.
-      - Provide a descriptive `title` attribute such as `"Eurostandart taxi Location Map"` for accessibility.
+**Left column:**
+- Phone buttons/links:
+  - `tel:+995577406604` (primary)
+  - `tel:+995593123353` (secondary)
+- Address line (always clickable to Maps):
+  - Text: `"თბილისი, შეშელიძის N17"`
+  - Link: `https://www.google.com/maps/search/?api=1&query=თბილისი,+შეშელიძის+17`
+  - `target="_blank"` and `rel="noopener"`
+- Embedded responsive map iframe using the provided `src` exactly, wrapped in `ratio ratio-16x9`, with rounded corners and `max-height: 400px`.
 
-- Right column:
-  - Email block:
-    - Label: `"ელ.ფოსტა:"`
-    - Mailto link:
-      - Href: `mailto:eurostandarttaxi@gmail.com`
-      - Visible text: `eurostandarttaxi@gmail.com`
-  - Facebook block:
-    - Label: `"Facebook:"`
-    - Link:
-      - URL: `https://www.facebook.com/people/Eurostandart-ევროსტანდარტ/61581653968613`
-      - Visible text: `"Facebook გვერდი"`
-      - Opens in a new tab and uses `rel="noopener"` for security.
-      - May optionally include the provided Facebook icon inline before the text.
-
-Ensure all links are keyboard-accessible and use appropriate `aria-label` attributes where helpful (e.g., for phone buttons and external Facebook link).
+**Right column:**
+- Email: `mailto:eurostandarttaxi@gmail.com`
+- Facebook: link to `https://www.facebook.com/people/Eurostandart-ევროსტანდარტ/61581653968613` (new tab, `rel="noopener"`)
 
 ### 5.10 Footer
-
-Footer appears at the bottom across full width.
-
-**Footer background:** dark blue (`#01294F`), text white or light gray.
-
-**Content layout:**
-- Left: brand name and short tagline.
-  - Text: `"Eurostandart taxi"` (bold) and small line: `"მძღოლების რეკრუტინგი და BYD Qin L ლიზინგი ტაქსისთვის თბილისში"`.
-- Center: small navigation (same anchor links as navbar, fewer if desired): `მთავარი`, `Yandex Go`, `BYD Qin L ბიზნეს კლასის ავტომობილი ლიზინგით`, `კონტაქტი`.
-- Right: social media icons.
-
-**Social media icons (repeat from navbar, slightly larger):**
-- Facebook icon only with link (`#` placeholder); do not show Instagram or WhatsApp.
-- Each icon has `aria-label`.
-
-**Bottom line:**
-- Small copyright text:
-  - `"© {current_year} Eurostandart taxi. ყველა უფლება დაცულია."` (replace `{current_year}` dynamically with JS or static current year).
+- Background: dark blue (`#01294F`), light text.
+- Left: brand name and tagline.
+- Center: anchor navigation links.
+- Right: Facebook icon link.
+- Bottom line:
+  - `"© {current_year} Eurostandart taxi. ყველა უფლება დაცულია."` (current year populated dynamically or static)
 
 ---
 
 ## 6. Accessibility & Interaction Details
-
 - Smooth scrolling when navbar links are clicked.
 - Ensure the fixed navbar does not cover section titles (add scroll margin or padding at top of sections).
-- Navbar toggler button must have:
-  - `aria-controls`, `aria-expanded`, `aria-label`.
-- FAQ accordion must:
-  - Allow keyboard navigation.
-  - Use appropriate `aria-expanded` and `aria-controls` attributes.
+- Navbar toggler button must include `aria-controls`, `aria-expanded`, and an `aria-label`.
+- FAQ accordion must allow keyboard navigation and use appropriate ARIA attributes.
 
 ---
 
 ## 7. Assets & External Resources
-
-- **Logo:** `https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/logo-wide.jpeg` (displayed as a 100px high logo in the navbar, positioned absolutely with a slight top overlap and scaled proportionally based on its intrinsic aspect ratio)
+- **Logo (schema + navbar):** `https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/logo-wide.jpeg`
 - **Hero image:** `https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/eurostandart_hero.jpeg`
-- **Icons:**
-  - Facebook icon image: `https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/Facebook_Logo_Secondary.png` (use this for all Facebook links in navbar and footer)
-  - Other icons: use Google icons or another public icon library for phone, location, Instagram, WhatsApp, benefit icons, step icons, FAQ toggles.
+- **OG/Twitter share image (1200×630):** `https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/og-image.jpeg`
+- **Facebook icon image:** `https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/Facebook_Logo_Secondary.png`
+- **Icons:** Material Symbols (Google icons) for phone/location/benefits/steps.
 
-No other external images are strictly required.
+No other external images are required.
 
 ---
 
 ## 8. Custom CSS Guidelines (in `<style>` block)
-
 - Define CSS variables for primary, secondary, background, and text colors for easy maintenance.
 - Override Bootstrap defaults only where needed (e.g., navbar background, button colors, section padding).
 - Ensure all custom classes are clearly named according to section purpose (e.g., `.hero-section`, `.benefit-card`, `.faq-section`).
