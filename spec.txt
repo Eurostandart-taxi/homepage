@@ -140,7 +140,7 @@ Use the exact canonical homepage URL below everywhere canonical is required:
 ### 4.4 Page Title
 Value-first Georgian title, ending in the exact business name:
 ```html
-<title>გახდი Yandex Go-ს მძღოლი — შემოუერთდი EuroStandart Taxi</title>
+<title>გახდი Yandex Go-ს მძღოლი EuroStandart Taxi-ში</title>
 ```
 
 ### 4.5 Meta Description
@@ -163,7 +163,7 @@ Georgian description focused on services; **no brand name** required:
 Georgian OG fields, canonical URL, Georgian locale, and the specified social image + dimensions:
 ```html
 <meta property="og:type" content="website">
-<meta property="og:title" content="გახდი Yandex Go-ს მძღოლი — შემოუერთდი EuroStandart Taxi">
+<meta property="og:title" content="გახდი Yandex Go-ს მძღოლი EuroStandart Taxi-ში">
 <meta property="og:description" content="მძღოლების რეგისტრაცია Yandex Go-ზე, პროფესიონალური მხარდაჭერა, გამჭვირვალე პირობები და BYD Qin L-ის ლიზინგი ტაქსისთვის თბილისში.">
 <meta property="og:image" content="https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/og-image.jpeg">
 <meta property="og:image:width" content="1200">
@@ -175,7 +175,7 @@ Georgian OG fields, canonical URL, Georgian locale, and the specified social ima
 ### 4.9 Twitter Card Tags
 ```html
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="გახდი Yandex Go-ს მძღოლი — შემოუერთდი EuroStandart Taxi">
+<meta name="twitter:title" content="გახდი Yandex Go-ს მძღოლი EuroStandart Taxi-ში">
 <meta name="twitter:description" content="მძღოლების რეგისტრაცია Yandex Go-ზე, პროფესიონალური მხარდაჭერა, გამჭვირვალე პირობები და BYD Qin L-ის ლიზინგი ტაქსისთვის თბილისში.">
 <meta name="twitter:image" content="https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/og-image.jpeg">
 ```
