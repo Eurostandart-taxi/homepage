@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-Single-page, mobile-first landing site for **Eurostandart taxi / Eurostandartი Taxi**, focused on recruiting:
+Single-page, mobile-first landing site for **EuroStandart Taxi / Eurostandartი Taxi**, focused on recruiting:
 - Drivers **with their own cars** for work via **Yandex Go** under Eurostandart (official partner)
 - Highly rated drivers **without cars** for **BYD Qin L** leasing
 
@@ -140,7 +140,7 @@ Use the exact canonical homepage URL below everywhere canonical is required:
 ### 4.4 Page Title
 Value-first Georgian title, ending in the exact business name:
 ```html
-<title>გახდი Yandex Go-ს მძღოლი — შემოუერთდი Eurostandart taxi</title>
+<title>გახდი Yandex Go-ს მძღოლი — შემოუერთდი EuroStandart Taxi</title>
 ```
 
 ### 4.5 Meta Description
@@ -163,7 +163,7 @@ Georgian description focused on services; **no brand name** required:
 Georgian OG fields, canonical URL, Georgian locale, and the specified social image + dimensions:
 ```html
 <meta property="og:type" content="website">
-<meta property="og:title" content="გახდი Yandex Go-ს მძღოლი — შემოუერთდი Eurostandart taxi">
+<meta property="og:title" content="გახდი Yandex Go-ს მძღოლი — შემოუერთდი EuroStandart Taxi">
 <meta property="og:description" content="მძღოლების რეგისტრაცია Yandex Go-ზე, პროფესიონალური მხარდაჭერა, გამჭვირვალე პირობები და BYD Qin L-ის ლიზინგი ტაქსისთვის თბილისში.">
 <meta property="og:image" content="https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/og-image.jpeg">
 <meta property="og:image:width" content="1200">
@@ -175,7 +175,7 @@ Georgian OG fields, canonical URL, Georgian locale, and the specified social ima
 ### 4.9 Twitter Card Tags
 ```html
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="გახდი Yandex Go-ს მძღოლი — შემოუერთდი Eurostandart taxi">
+<meta name="twitter:title" content="გახდი Yandex Go-ს მძღოლი — შემოუერთდი EuroStandart Taxi">
 <meta name="twitter:description" content="მძღოლების რეგისტრაცია Yandex Go-ზე, პროფესიონალური მხარდაჭერა, გამჭვირვალე პირობები და BYD Qin L-ის ლიზინგი ტაქსისთვის თბილისში.">
 <meta name="twitter:image" content="https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/og-image.jpeg">
 ```
@@ -193,7 +193,7 @@ Transportation service schema with verified business facts:
   "@context": "https://schema.org",
   "@type": "TransportationService",
   "@id": "https://eurostandart.work/#transportationservice",
-  "name": "Eurostandart taxi",
+  "name": "EuroStandart Taxi",
   "url": "https://eurostandart.work/",
   "logo": "https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/logo-wide.jpeg",
   "telephone": [
@@ -243,7 +243,7 @@ Page is structured into the following main sections, each with an `id` for navba
 - Background: dark blue (`#01294F`), white text.
 - Left side: logo image only (no brand text), styled to be clearly visible within the navbar on all devices.
   - Logo image: `https://cdn.breba.app/eurostandart/e3154ddc-b0b3-4aa0-a9b7-20b49b557262/assets/logo-wide.jpeg`
-  - Alt text: `"Eurostandart taxi Logo"`
+  - Alt text: `"EuroStandart Taxi Logo"`
   - Logo size on desktop: fixed width `170px`, height `40px`, with `border-radius: 2rem`.
   - Logo size on small mobile screens: width approximately `120px`, height `32px`, with the same `border-radius: 2rem`, aligned within the navbar without overlapping its bounds.
 - Right side: navigation links (scroll to sections) and social icons.
@@ -273,7 +273,7 @@ Layout: Full-width section under navbar, with:
 - Small label above main title (badge style):
   - Text: `"Yandex Go-ს  ოფიციალური წარმომადგენელი​ საქართველოში"`
 - Main headline (h1, in Georgian):
-  - `"Eurostandart taxi"`
+  - `"EuroStandart Taxi"`
   - `"მძღოლების შესაძლებლობები"` rendered on the next line with a small vertical gap (e.g., line break and margin utility)
 - Supporting subheading CTA cards (under the main headline):
   - Two vertically stacked CTA cards (one on top of the other).
@@ -313,14 +313,14 @@ Background:
 - Use the light gray/off-white background color token.
 
 **Section title (h2):**
-- `"Eurostandart taxi – ვინ ვართ ჩვენ"`
+- `"EuroStandart Taxi – ვინ ვართ ჩვენ"`
 
 **Intro paragraph:**
-- `"Eurostandart taxi  საქართველოს ბაზარზე 2019 წლიდან ფუნქციონირებს. კომპანიის ძირითადი საქმიანობა ტაქსის სფეროში მსუბუქი ავტომობილების ლიზინგია. 2020 წელს კომპანია Yandex Go-ს პარტნიორი გახდა. Eurostandart taxi განკარგავს ეფექტურ და დინამიურ პერსონალს, რომელიც მძღოლებს უზრუნველყოფს ოპერატიული, ტექნიკური და კონსულტაციური მხარდაჭერით. პროფესიონალური მიდგომის წყალობით ტაქსის სეგმენტის კლიენტებს შეუძლიათ სტაბილური შემოსავლის მიღება მაქსიმალურად კომფორტულ პირობებში!"`
+- `"EuroStandart Taxi  საქართველოს ბაზარზე 2019 წლიდან ფუნქციონირებს. კომპანიის ძირითადი საქმიანობა ტაქსის სფეროში მსუბუქი ავტომობილების ლიზინგია. 2020 წელს კომპანია Yandex Go-ს პარტნიორი გახდა. EuroStandart Taxi განკარგავს ეფექტურ და დინამიურ პერსონალს, რომელიც მძღოლებს უზრუნველყოფს ოპერატიული, ტექნიკური და კონსულტაციური მხარდაჭერით. პროფესიონალური მიდგომის წყალობით ტაქსის სეგმენტის კლიენტებს შეუძლიათ სტაბილური შემოსავლის მიღება მაქსიმალურად კომფორტულ პირობებში!"`
 
 **Two cards:**
 - Card 1: "Yandex Go მიმართულება"
-  - `"Eurostandart taxi ოფიციალური ოპერატორია Yandex Go პლატფორმაზე. ვარეგისტრირებთ მძღოლებს საკუთარი ავტომობილებით, ვუწევთ მხარდაჯერას და მომსახურებას."`
+  - `"EuroStandart Taxi ოფიციალური ოპერატორია Yandex Go პლატფორმაზე. ვარეგისტრირებთ მძღოლებს საკუთარი ავტომობილებით, ვუწევთ მხარდაჯერას და მომსახურებას."`
 - Card 2: "BYD Qin L ლიზინგი"
   - `"კომპანიის მეორე მიმართულება უკავშირდება სრულიად ახალი BYD Qin L მეხუთე თაობის დატენვადი ჰიბრიდული ავტომობილების ლიზინგს. მაღალი რეიტინგის მქონე მძღოლებს ვთავაზობთ ტაქსისთვის მზადყოფნაში მყოფ (ბიზნეს, კომფორტ+, კომფორტი) ავტომობილებს სპეციალური პირობებით."`
 
@@ -329,10 +329,10 @@ Background:
 - `"Yandex Go – იმუშავე საკუთარი ან იჯარით გაყვანილი ავტომობილით"`
 
 **Intro:**
-- `"დარეგისტრირდი Yandex Go-ზე სამუშაოდ Eurostandart taxi-ის საშუალებით და მიიღე გამჭვირვალე პირობები და მუდმივი მხარდაჭერა."`
+- `"დარეგისტრირდი Yandex Go-ზე სამუშაოდ EuroStandart Taxi-ის საშუალებით და მიიღე გამჭვირვალე პირობები და მუდმივი მხარდაჭერა."`
 
 **Key benefits:**
-- Subheading: `"რას გთავაზობთ Eurostandart taxi Yandex Go მძღოლებს"` (centered)
+- Subheading: `"რას გთავაზობთ EuroStandart Taxi Yandex Go მძღოლებს"` (centered)
 - Bullet points:
   - `"0%-იანი საკომისიო 5%-ის ნაცვლად პირველი ერთი თვის განმავლობაში"`
   - `"დილით დატენე ავტომობილი ბუნებრივი აირით 12%-იანი ფასდაკლებით და გადაიხადე საღამოს"`
@@ -350,10 +350,10 @@ Background:
 - `"BYD Qin L – ბიზნეს კლასის ავტომობილი ლიზინგით"`
 
 **Intro:**
-- `"მეტი შემოსავალი Eurostandart taxi-ის თანამედროვე ავტომობილით. თუ არ გყავს საკუთარი ავტომობილი, თუ არ გინდა იჯარით გაყვანილი ავტომობილით მუშაობა, ან გინდა საკუთარი ავტომობილის ახლით ჩანაცვლება, Eurostandart taxi გთავაზობს სრულიად ახალ BYD QIN L დატენვად მეხუთე თაობის ჰიბრიდულ ავტომობილს ტაქსისთვის."`
+- `"მეტი შემოსავალი EuroStandart Taxi-ის თანამედროვე ავტომობილით. თუ არ გყავს საკუთარი ავტომობილი, თუ არ გინდა იჯარით გაყვანილი ავტომობილით მუშაობა, ან გინდა საკუთარი ავტომობილის ახლით ჩანაცვლება, EuroStandart Taxi გთავაზობს სრულიად ახალ BYD QIN L დატენვად მეხუთე თაობის ჰიბრიდულ ავტომობილს ტაქსისთვის."`
 
 **Subheading:**
-- `"რატომ BYD Qin L Eurostandart taxi-დან"`
+- `"რატომ BYD Qin L EuroStandart Taxi-დან"`
 
 **Key points:**
 - `"სრულად ახალი ბიზნეს კლასის BYD QIN L ავტომობილები ლიზინგით"`
@@ -385,7 +385,7 @@ Background:
 
 ### 5.7 Benefits Summary Section (`#benefits`)
 **Section title (h2):**
-- `"რატომ Eurostandart taxi"`
+- `"რატომ EuroStandart Taxi"`
 
 **Benefit cards (with icons):**
 1. **"ოფიციალური Yandex პარტნიორი"**
@@ -408,13 +408,13 @@ Background:
 1. **Q:** `"რა საკომისიო აქვს კომპანიას?"`  
    **A:** `"კომპანია იღებს 0%-ს ერთი თვის განმავლობაში, შემდეგ 5%-იან საკომისიოს"`
 2. **Q:** `"შემიძლია თუ არა ვიყო მძღოლი, თუ არ მაქვს საკუთარი ავტომობილი?"`  
-   **A:** `"დიახ. Eurostandart taxi გთავაზობს სრულიად ახალ BYD Qin L ავტომობილებს ლიზინგით. საჭირო არის მაღალი რეიტინგი და მინიმალური კრიტერიუმების დაკმაყოფილება, რის შემდეგაც ირჩევ ლიზინგის გეგმას და იწყებ მუშაობას."`
+   **A:** `"დიახ. EuroStandart Taxi გთავაზობს სრულიად ახალ BYD Qin L ავტომობილებს ლიზინგით. საჭირო არის მაღალი რეიტინგი და მინიმალური კრიტერიუმების დაკმაყოფილება, რის შემდეგაც ირჩევ ლიზინგის გეგმას და იწყებ მუშაობას."`
 3. **Q:** `"რა უპირატესობა აქვს BYD Qin L ავტომობილს ტაქსისთვის?"`  
-   **A:** `"BYD Qin L ბიზნეს კლასის ავტომობილია, მეხუთე თაობის დატენვადი ჰიბრიდი, რომელიც გამოირჩევა დაბალი საწვავის ხარჯით, თანამედროვე უსაფრთხოების სისტემებითა და მაღალი კომფორტით. Eurostandart taxi გთავაზობთ Yandex Go-ზე ტაქსისთვის მომზადებულ კონფიგურაციებს: ბიზნეს, კომფორტ+, კომფორტი და ბასლაინი."`
+   **A:** `"BYD Qin L ბიზნეს კლასის ავტომობილია, მეხუთე თაობის დატენვადი ჰიბრიდი, რომელიც გამოირჩევა დაბალი საწვავის ხარჯით, თანამედროვე უსაფრთხოების სისტემებითა და მაღალი კომფორტით. EuroStandart Taxi გთავაზობთ Yandex Go-ზე ტაქსისთვის მომზადებულ კონფიგურაციებს: ბიზნეს, კომფორტ+, კომფორტი და ბასლაინი."`
 4. **Q:** `"როგორ ხდება გამომუშავებული თანხის მიღება Yandex Go-ზე მუშაობისას?"`  
-   **A:** `"Eurostandart taxi-სთან თანამშრომლობისას შეგიძლია Yandex Go-ზე გამომუშავებული თანხის ჩარიცხვა დამოუკიდებლად, ნებისმიერ დროს. ეს გაძლევს მოქნილობას დაგეგმარებაში და ხარჯების მართვაში. ასევე, შეგიძლია თანხის გატანა კომპანიის ოფისში ვიზიტით. თანხის გატანა შესაძლებელია ყოველდღე, კვირის გარდა."`
-5. **Q:** `"რა დონის მხარდაჭერას ვიღებ Eurostandart taxi-ისგან როგორც მძღოლი?"`  
-   **A:** `"Eurostandart taxi გთავაზობს სატელეფონო კონსულტაციას, რეგისტრაციაში დახმარებას, ბუნებრივი გაზის განვადებით შეძენას – დილით დატენე ავტომობილი ბუნებრივი გაზით 12%-იანი ფასდაკლებით და გადაიხადე საღამოს​, ავტოსერვისის მომსახურებას კონსიგნაციით, სწრაფ სესხებს რეგისტრაციიდან სამი თვის შემდეგ და მუდმივად განახლებულ სპეციალურ შეთავაზებას."`
+   **A:** `"EuroStandart Taxi-სთან თანამშრომლობისას შეგიძლია Yandex Go-ზე გამომუშავებული თანხის ჩარიცხვა დამოუკიდებლად, ნებისმიერ დროს. ეს გაძლევს მოქნილობას დაგეგმარებაში და ხარჯების მართვაში. ასევე, შეგიძლია თანხის გატანა კომპანიის ოფისში ვიზიტით. თანხის გატანა შესაძლებელია ყოველდღე, კვირის გარდა."`
+5. **Q:** `"რა დონის მხარდაჭერას ვიღებ EuroStandart Taxi-ისგან როგორც მძღოლი?"`  
+   **A:** `"EuroStandart Taxi გთავაზობს სატელეფონო კონსულტაციას, რეგისტრაციაში დახმარებას, ბუნებრივი გაზის განვადებით შეძენას – დილით დატენე ავტომობილი ბუნებრივი გაზით 12%-იანი ფასდაკლებით და გადაიხადე საღამოს​, ავტოსერვისის მომსახურებას კონსიგნაციით, სწრაფ სესხებს რეგისტრაციიდან სამი თვის შემდეგ და მუდმივად განახლებულ სპეციალურ შეთავაზებას."`
 
 ### 5.9 Contact Section (`#contact`)
 Background:
@@ -446,7 +446,7 @@ Background:
 - Center: anchor navigation links (including a link labeled exactly "BYD Qin L" pointing to the `#leasing` section).
 - Right: Facebook icon link.
 - Bottom line:
-  - `"© {current_year} Eurostandart taxi. ყველა უფლება დაცულია."` (current year populated dynamically or static)
+  - `"© {current_year} EuroStandart Taxi. ყველა უფლება დაცულია."` (current year populated dynamically or static)
 
 ---
 
