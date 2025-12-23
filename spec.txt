@@ -76,6 +76,7 @@ The entire site is a single `index.html` file.
 - **Icons**:
   - Use simple line or filled icons from Google icons or another public icon set.
   - Color icons using primary or secondary colors.
+  - When using Material Symbols via the `icon_names` query parameter, include all required icons in a single alphabetical, comma-separated list. This list must include at least: `arrow_forward, call, car_rental, close, compare_arrows, directions_car, done, handshake, local_taxi, location_city, location_on, menu, verified`.
 
 ---
 
@@ -366,8 +367,55 @@ Background:
 - `"აირჩიე ლიზინგის გეგმა, რომელიც შეესაბამება შენს გამოცდილებას და გრაფიკს, იმუშავე Yandex Go-ზე და გამოიმუშავე მეტი თანამედროვე BYD Qin L ავტომობილით."`
 
 **CTA:**
-- `"გაინტერესებს პირობები? დაგვირეკე და დარეგისტრირდი დღესვე."`
+- Primary button: `"პირობები"` which opens a modal popup with detailed leasing conditions.
 - Both phone numbers shown again.
+
+**Leasing Conditions Modal:**
+- Triggered by the primary `"პირობები"` button in this section.
+- Centered Bootstrap modal with scroll support on small screens.
+- Contains three stacked cards with the following content. Use semantic HTML lists (`<ul><li>`) for the bullet points instead of relying on preformatted text or manual bullet characters:
+
+  1) Card title:
+  - `"ლიზინგის პირობები ერთ მძღოლზე"`
+
+  Card text:
+  - `• ლიზინგის ვადა 2-დან 3 წლამდე`
+  - `• მძღოლის თანამონაწილეობა შეადგენს 1000 დოლარის ექვივალენტით ლარში`
+  - `შესაძლებელია გადანაწილება -3 დან 6 თვემდე`
+  - ``
+  - `• ყოველდღიური გადასახადი 80 ლარი`
+  - `• დაზღვევა 260  ლარი თვეში`
+  - `• კვირაში ერთი დღე დასვენება`
+  - `• იანდექსზე სამუშაო გრაფიკი  თვეში მინიმუმ 260 საათი`
+
+  2) Card title:
+  - `"ლიზინგის პირობები ორ მძღოლზე"`
+
+  Card text:
+  - `• ლიზინგის ვადა 1,5-დან 2  წლამდე`
+  - `• 2  მძღოლის თანამონაწილეობა შეადგენს 1 000 დოლარის ექვივალენტი ლარში`
+  - `შესაძლებელია გადანაწილება -3 დან 6 თვემდე`
+  - ``
+  - `• ყოველდღიური გადასახადი 2 მძღოლზე 115 ლარი`
+  - `• დაზღვევა 260  ლარი თვეში`
+  - `• კვირაში ერთი დღე დასვენება`
+  - `• იანდექსზე სამუშაო გრაფიკი  თვეში მინიმუმ 460 საათი`
+
+  3) Card title:
+  - `"საოპერაციო ლიზინგის პირობები ერთ მძღოლზე"`
+
+  Card text:
+  - `• ოპერაციული ლიზინგის ვადა 3 წელი`
+  - `• მძღოლის შემოსავალი გამომუშავებული თანხის 45%, ბონუსი 100%`
+  - `• ანაზღაურება ყოველდღე`
+  - `• საწვავის და ავტომობილის ექსპლუატაციის ყველა ხარჯს ფარავს კომპანია`
+  - `• იანდექსზე სამუშაო გრაფიკი  თვეში მინიმუმ 260 საათი`
+  - `• სამი წლის შემდეგ მძღოლს ექნება ავტომობილის შესყიდვის შესაძლებლობა`
+
+- Each card follows the existing card visual style (white background, small radius, internal padding, soft shadow or light border).
+- Modal has a close button with:
+  - A close icon (Material Symbol `close`) only, no visible Georgian text label next to it.
+  - Georgian accessible label and tooltip: `aria-label="დახურვა"` and `title="დახურვა"`.
 
 ### 5.6 How It Works Section (`#how-it-works`)
 **Section title (h2):**
