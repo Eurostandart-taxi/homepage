@@ -575,6 +575,56 @@ html.font-hero-600-ready .hero-location {
     letter-spacing: 0.05em;
 }
 
+.navbar-lang-slot {
+    z-index: 2;
+}
+
+.navbar-custom .container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    column-gap: clamp(0.75rem, 2vw, 2rem);
+}
+
+.navbar-custom .navbar-brand {
+    grid-column: 1;
+}
+
+.navbar-lang-slot {
+    grid-column: 2;
+    justify-self: center;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.navbar-custom .navbar-toggler {
+    grid-column: 3;
+    justify-self: end;
+}
+
+.navbar-custom .navbar-collapse {
+    grid-column: 1 / -1;
+}
+
+@media (min-width: 992px) {
+    .navbar-custom .navbar-collapse {
+        grid-column: 3;
+        display: flex !important;
+        flex-basis: auto;
+        flex-grow: 0;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .navbar-custom .navbar-collapse > .ms-lg-auto.d-flex.flex-column.flex-lg-row.align-items-lg-center.mb-2.mb-lg-0 {
+        justify-content: flex-end;
+    }
+
+    .navbar-custom .navbar-collapse > .ms-lg-auto.d-flex.flex-column.flex-lg-row.align-items-lg-center.mb-2.mb-lg-0 > .navbar-nav {
+        margin-left: auto;
+    }
+}
+
 .lang-switch-active {
     color: var(--color-secondary);
 }
